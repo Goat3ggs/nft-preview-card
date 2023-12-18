@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main>
+    <div class="container">
+      <!-- first section will contain our image for the product -->
+      <div class="img-container">
+        <img class="product-img change" src="./images/image-equilibrium.jpg" alt="presentation image for the sold product">
+        <div>
+          <img src="./images/icon-view.svg" alt="">
+        </div>
+      </div>
+      <!-- next we have a div that holds the information about our post -->
+      <div class="post-card-information">
+        <h1 class="nft-title">Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+
+        <!-- I have to make a separate div for the flexible elements so I can handle them easily -->
+        <div class="flex-group">
+          <div class="flex currency-icon-and-worth">
+            <img src="./images/icon-ethereum.svg" alt="the currency in which the product is sold.">
+            <p class="smaller-p">0.041 ETH</p>
+          </div>
+          <div class="flex expiration-date">
+            <img src="./images/icon-clock.svg" alt="the clock icon that shows how much time the post is available.">
+            <p>3 days left</p>
+          </div>
+        </div>
+      </div>
+      
+      <!--Here we should have a break line-->
+      <hr>
+      <!--And right after that we have the user's information contained in another div-->
+      <div class="user-information-section">
+        <img src="./images/image-avatar.png" alt="the user's avatar">
+        <p class="user-name">Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.instagram.com/goateggs_/">Stefania</a>.
+  </div>
+</body>
+</html>

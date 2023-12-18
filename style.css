@@ -1,0 +1,179 @@
+:root {
+    /* primary colors */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* secondary colors */
+    --main-bkg-clr: hsl(217, 54%, 11%);
+    --card-bkg-clr: hsl(216, 50%, 16%);
+    --break-line-clr: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+
+    --ff-base: 'Outfit', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semiBold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+/*
+  5. Improve media defaults
+*/
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: 1.125rem; /* this should be 18px */
+    background-color: var(--main-bkg-clr);
+    color: var(--soft-blue);
+
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-bkg-clr);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 1rem;
+    margin-inline: 1rem;
+    overflow: hidden;
+    max-width: 350px;
+}
+
+
+/*  IMPORTANT TO KNOW:
+    Positioning, transitions
+*/
+.img-container {
+    position: relative;
+}
+
+.img-container div {
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 50%);
+    border-radius: 10px;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.img-container div:hover {
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.img-container div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+
+.product-img {
+    object-fit: contain;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem; 
+}
+
+.nft-title {
+    color: var(--white);
+    font-weight: var(--fw-semiBold);
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+
+.nft-title:hover, span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.post-card-information > p {
+    margin: 15px 0;
+}
+
+.flex-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.currency-icon-and-worth {
+    font-weight: var(--fw-semiBold);
+    color: var(--cyan);
+    padding: 15px 0;
+}
+
+hr {
+    border: 1px solid var(--break-line-clr);
+}
+
+.user-information-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 15px 0 0;
+}
+
+.user-information-section > img {
+    height: 40px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+span {
+    color: var(--white);
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
