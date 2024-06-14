@@ -17,3 +17,5 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+
+[Live Site](https://goat3ggs.github.io/nft-preview-card/)
